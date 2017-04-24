@@ -22,7 +22,7 @@ app.setShowClickListeners = function() {
 app.getShowGif = function(showName) {
     console.log("gif");
     $.ajax({
-        url: 'http://api.giphy.com/v1/gifs/search', // retrieves the gif
+        url: 'https://api.giphy.com/v1/gifs/search', // retrieves the gif
         method: 'GET',
         data: {
             q: showName,
@@ -43,7 +43,7 @@ app.getShowGif = function(showName) {
 //get show method will make the Ajax request to the API
 app.getShows = function(showName) {
     $.ajax({
-        url: 'http://api.tvmaze.com/search/shows',
+        url: 'https://api.tvmaze.com/search/shows',
         method: 'GET',
         data: {
             q: showName
@@ -59,7 +59,7 @@ app.getShows = function(showName) {
 };
 app.getShowData = function(showId) {
     $.ajax({ //get the data of a show based on imdb id
-        url: 'http://api.tvmaze.com/lookup/shows',
+        url: 'https://api.tvmaze.com/lookup/shows',
         method: 'GET',
         data: {
             imdb: showId
